@@ -10,7 +10,7 @@
 </details> 
 
 ## About
-Build a Web application consisting of a Login function using the MVC framework.
+Build a Web application consisting of a Login function using the MVC framework of Struts 2.
 
 ## Installations
 * Eclipse IDE 2020-09
