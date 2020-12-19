@@ -13,17 +13,16 @@ import ase.gp3.controller.LoginAction;
 import ase.gp3.model.User;
 import ase.gp3.utils.DbConnect;
 
-/** 
+/**
  * Programmer: Gwyn Bong Xiao Min
  * Date created: 14 Dec 2020, 6:26:01 pm
- * Date modified: 19 Dec 2020, 8:08:19 pm
+ * Date modified: 19 Dec 2020, 9:18:32 pm
  */
 public class LoginAction extends ActionSupport{
 	private static final long serialVersionUID = 1L;
 	private Connection dbConnection;
 	
 	private static final String SUCCESS = "success";
-	private static final String FAILED = "error";
 	
 	Properties prop = new Properties();
 	InputStream inputStrm = LoginAction.class.getClassLoader().getResourceAsStream("properties");
