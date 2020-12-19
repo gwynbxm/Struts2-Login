@@ -3,24 +3,22 @@
  */
 package ase.gp3.utils;
 
-import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.util.Properties;
+import java.io.*;
+import java.sql.*;
+import java.util.*;
 
 import ase.gp3.utils.DbConnect;
 
 /**
  * Programmer: Gwyn Bong Xiao Min
  * Date created: 14 Dec 2020, 7:40:20 pm
- * Date modified: 14 Dec 2020, 7:40:20 pm
+ * Date modified: 19 Dec 2020, 8:10:42 pm
  */
 public class DbConnect {
 	public static Connection getSqlConnection() throws Exception {
 		Connection con = null;
 		Properties prop = new Properties();
-		InputStream inputStrm = DbConnect.class.getClassLoader().getResourceAsStream("properties.properties");
+		InputStream inputStrm = DbConnect.class.getClassLoader().getResourceAsStream("properties");
 
 		try {
 			prop.load(inputStrm);

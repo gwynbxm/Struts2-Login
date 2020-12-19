@@ -3,11 +3,9 @@
  */
 package ase.gp3.controller;
 
-import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.util.Properties;
+import java.io.*;
+import java.sql.*;
+import java.util.*;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -15,10 +13,10 @@ import ase.gp3.controller.LoginAction;
 import ase.gp3.model.User;
 import ase.gp3.utils.DbConnect;
 
-/**
+/** 
  * Programmer: Gwyn Bong Xiao Min
  * Date created: 14 Dec 2020, 6:26:01 pm
- * Date modified: 14 Dec 2020, 6:26:01 pm
+ * Date modified: 19 Dec 2020, 8:08:19 pm
  */
 public class LoginAction extends ActionSupport{
 	private static final long serialVersionUID = 1L;
@@ -33,16 +31,10 @@ public class LoginAction extends ActionSupport{
 	private User users = new User();
 
 
-	/**
-	 * @return the users
-	 */
 	public User getUsers() {
 		return users;
 	}
 
-	/**
-	 * @param users the users to set
-	 */
 	public void setUsers(User users) {
 		this.users = users;
 	}
@@ -55,10 +47,6 @@ public class LoginAction extends ActionSupport{
 		}
 	}
 	
-	/**
-	 * execute: calls checkCredentials
-	 * @return:
-	 */
 	@Override
 	public String execute() throws Exception {
 		boolean success = checkCredentials(users.getUsername(), users.getPassword()); 
@@ -70,13 +58,6 @@ public class LoginAction extends ActionSupport{
 		}
 	}
 	
-	/**
-	 * checkCredentials: check login credentials from user input and check with mySQL
-	 * @param username
-	 * @param password
-	 * @return boolean: true - user exists, false - user does not exists
-	 * @throws Exception
-	 */
 	public boolean checkCredentials(String username, String password) throws Exception {
 		boolean validCred = false;
 		Connection conn;
