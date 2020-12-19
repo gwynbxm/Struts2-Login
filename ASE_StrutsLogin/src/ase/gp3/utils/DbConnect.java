@@ -12,7 +12,7 @@ import ase.gp3.utils.DbConnect;
 /**
  * Programmer: Gwyn Bong Xiao Min
  * Date created: 14 Dec 2020, 7:40:20 pm
- * Date modified: 19 Dec 2020, 8:10:42 pm
+ * Date modified: 19 Dec 2020, 9:17:22 pm
  */
 public class DbConnect {
 	public static Connection getSqlConnection() throws Exception {
@@ -22,8 +22,8 @@ public class DbConnect {
 
 		try {
 			prop.load(inputStrm);
-			Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
-			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + 
+			Class.forName(prop.getProperty("driver")).newInstance();
+			con = DriverManager.getConnection(prop.getProperty("jdbc") + 
 											prop.getProperty("db.schema"), 
 											prop.getProperty("db.username"), 
 											prop.getProperty("db.password"));
