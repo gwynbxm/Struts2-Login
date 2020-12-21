@@ -4,20 +4,22 @@
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Login</title>
-</head>
+	<head>
+		<meta charset="ISO-8859-1">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Login</title>
+	</head>
 <body>
 
-
-	<h2>CZ3002 Assignment 2</h2>
-	
+	<div class="login-container">
+	<span class="form-title">CZ3002 Assignment 2</span>
 	<s:form action="login">
-		<s:textfield name="users.Username" label="Username" required="true"/>
-		<s:password name="users.Password" label="Password" required="true"/>
-		<s:submit value="Login"/>
+		<s:textfield id="usernameLabel" name="users.Username" label="Username" required="true" cssClass="input-field" placeholder="Enter Username"/>
+		<s:password id="passwordLabel" name="users.Password" label="Password" required="true" cssClass="input-field" placeholder="Enter Password"/>
+		<s:submit value="Login" cssClass="login-form-button"/>
 	</s:form>
- <s:actionerror style="color: red"/>
+	<s:actionerror/>
+	</div>
+
 </body>
 </html>
