@@ -9,6 +9,15 @@ body {
 	background: #e9faff;
 }
 
+h2 {
+	font-family: "OpenSans-Regular";	
+}
+
+h3 {
+	font-family: "OpenSans-Regular";
+	font-style: oblique;
+}
+
 .form-title {
 	display: block;
 	font-family: "OpenSans-Regular";
@@ -62,7 +71,7 @@ label[for="passwordLabel"]{
 	padding: 0 15px;
 }
 
-.login-form-button {
+.button {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -88,6 +97,10 @@ label[for="passwordLabel"]{
   	transition: all 0.4s;
 }
 
-.login-form-button:hover{
+.button:hover{
 	background-color:#000000;
+}
+
+.logonUser {
+	color: #0000CD;
 }

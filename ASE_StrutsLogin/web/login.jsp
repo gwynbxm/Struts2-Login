@@ -16,7 +16,7 @@
 	<s:form action="login">
 		<s:textfield id="usernameLabel" name="users.Username" label="Username" required="true" cssClass="input-field" placeholder="Enter Username"/>
 		<s:password id="passwordLabel" name="users.Password" label="Password" required="true" cssClass="input-field" placeholder="Enter Password"/>
-		<s:submit value="Login" cssClass="login-form-button"/>
+		<s:submit value="Login" cssClass="button"/>
 	</s:form>
 	<s:actionerror/>
 	</div>
