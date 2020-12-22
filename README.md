@@ -11,7 +11,8 @@
 </details> 
 
 ## General Information
-In this assignment 2, we are required to build a Web application consisting of a Login function using the MVC framework of Struts 2. The implementation of CSS was added voluntary to enhance the look of the Web application.
+A Web application consisting of a Login function, making use of the MVC (Model-View-Controller) framework of Struts 2.5.25. 
+It also authenticates with the MySQL Server 8.0 database and added an optional component of CSS to improve the look of the Web application.
 
 ## Technologies
 * Eclipse IDE 2020-09
